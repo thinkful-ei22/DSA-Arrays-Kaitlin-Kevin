@@ -32,11 +32,11 @@ class Array {
     return memory.get(this.ptr + index);
   }
   pop() {
-    if (index === 0) {
-      throw new Error('Index error');
+    if (this.length == 0) {
+        throw new Error('Index error');
     }
-    const value = memory.get(this.ptr + this.length -1);
-    this.length --;
+    const value = memory.get(this.ptr + this.length - 1);
+    this.length--;
     return value;
   }
   insert(index, value) {
