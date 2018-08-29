@@ -35,7 +35,17 @@ function main() {
   arr.remove(0);
   arr.remove(0);
 
+  // add a single item 'tauhida' to the array
+  arr.push("tauhida");
+
+  // print that item
+  console.log(arr.get(0));
+
+  // The result of printing at the first postion returns as NaN - due to the fact that this current array was housing explicitly numbers, there's a chance it could have been typecast and therefore does not like the string that was inserted into it.
+
   console.log(arr);
 }
+
+// the purpose of the resize function in our array class is to copy over the data to a new area of memory where there is enough space to house it when there is no space in its current position - additionally, it's there to throw an error when there is no more memory to work with or insignificant space.
 
 main();
