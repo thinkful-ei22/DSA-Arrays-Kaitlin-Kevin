@@ -53,6 +53,22 @@ filterArray([1,2,3,4,5,6,7,8]);
 
 // 3. Max sum in the array
 
+function sumOfNumbers (arr) {
+  // make a sum variable
+  let tempSum = 0;
+  let largeSum = 0;
+  // loop through and add to sum
+  for (let i = 0; i < arr.length; i++) {
+    tempSum = tempSum += arr[i];
+    if (tempSum > largeSum) {
+      largeSum = tempSum;
+    }
+  }
+  console.log(largeSum);
+}
+
+sumOfNumbers([4,6,-3,5,-2,1]);
+
 // 4. Merge Arrays
 
 // 5. Remove Characters
