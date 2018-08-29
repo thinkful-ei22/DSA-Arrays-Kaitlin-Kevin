@@ -26,6 +26,16 @@ function main() {
   // After three pops, the length will be reduced to 3 as we are removing three items from the array. The capacity will remain 12 and the address (ptr) will still begin at 3 since no more space had to be added/it didn't have to be copied anywhere.
 
   console.log(arr);
+
+  // print the first item in the array
+  console.log(arr.get(0));
+
+  // empty the array - REMEMBER! It shifts down every time so you need to keep deleting at position 0 rather than deleting 0, 1, 2
+  arr.remove(0);
+  arr.remove(0);
+  arr.remove(0);
+
+  console.log(arr);
 }
 
 main();
