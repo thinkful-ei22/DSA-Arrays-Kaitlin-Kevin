@@ -141,11 +141,11 @@ function products (arr) {
       removeNum = false;
     }
     console.log(newArray);
-    let numSum = 1;
+    let numMult = 1;
     for (let y = 0; y < newArray.length; y++) {
-      numSum *= newArray[y];
+      numMult *= newArray[y];
     }
-    productArray.push(numSum);
+    productArray.push(numMult);
     newArray = [];
   }
   console.log(productArray);
@@ -154,5 +154,32 @@ function products (arr) {
 products([1, 3, 9, 4]);
 
 // 7. 2D array
+
+function twoD (arr){
+  // loop through each column
+  for (let i = 0; i < arr.length; i++) {
+    let isIt0 = false;
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] === 0) {
+        isIt0 = true;
+      }
+      if (isIt0 === true) {
+        for (x = 0; x < arr.length; x++) {
+          for (y = 0; y < arr[x].length; y++) {
+            arr[i][j] = 0;
+          }
+        }
+      }
+    }
+    isIt0 = false;
+  }
+  console.log(arr);
+}
+
+twoD([[1,0,1,1,0],
+  [0,1,1,1,0],
+  [1,1,1,1,1],
+  [1,0,1,1,1],
+  [1,1,1,1,1]]);
 
 // 8. String rotation
